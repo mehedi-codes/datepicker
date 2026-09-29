@@ -1,19 +1,69 @@
 {
-  "name": "date-picker-component",
+  "name": "@mehedi-codes/datepicker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "type": "module",
+  "description": "A sleek, modern, and highly customizable React date picker component with TypeScript support",
   "license": "ISC",
+  "author": "Mehedi Codes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehedi-codes/datepicker"
+  },
+  "homepage": "https://datepicker.mehedi-codes.com",
+  "keywords": [
+    "datepicker",
+    "date-picker",
+    "react",
+    "react-component",
+    "calendar",
+    "date-selection",
+    "customizable",
+    "ui-component",
+    "tailwindcss",
+    "typescript",
+    "date-fns"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "bun --bun run vite",
+    "build": "bun run tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write src"
+  },
   "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "date-fns": "^3.6.0",
-    "react": "^18.3.1"
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-popover": "^1.0.7",
+    "react-day-picker": "^8.9.1"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.3"
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "tailwindcss": "^4.0.0",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "prettier": "^3.1.0"
   }
 }
